@@ -14,7 +14,11 @@ function Presentation() {
 
   return (
     posts.length === 0
-      ? "Loading..."
+      ? <div className="d-flex justify-content-center mt-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
       : posts.map((post, index) => (
         <div className="card mt-5" key={index}>
           <div className="card-body">

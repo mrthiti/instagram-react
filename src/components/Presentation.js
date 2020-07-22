@@ -18,7 +18,11 @@ function Presentation() {
         <div className="row">
           {
             listPresentation.length === 0
-              ? "Loading..."
+              ? <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
               : listPresentation.map((it, index) => (
                 <div className="col" key={index}>
                   <div className="row justify-content-xl-center">
