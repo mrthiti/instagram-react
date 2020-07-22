@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './assets/logo.png';
-import Presentation from './components/Presentation';
-import Profile from './components/Profile';
-import Post from './components/Post';
+import logo from '../assets/logo.png';
+import Presentation from '../components/Presentation';
+import Profile from '../components/Profile';
+import Post from '../components/Post';
 
 function App() {
   return (
