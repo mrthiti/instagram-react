@@ -11,7 +11,7 @@ import {
   Route
 } from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <Provider store={store}>
