@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './pages/Home';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './stores'
@@ -18,14 +18,8 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route exact path="/">
-          <App />
+          <Home />
         </Route>
-        {/* <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/dashboard">
-        <Dashboard />
-      </Route> */}
       </Switch>
     </Router>
   </Provider>,
