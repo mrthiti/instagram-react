@@ -3,11 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux'
+import store from './stores'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <App />
+        </Route>
+        {/* <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/dashboard">
+        <Dashboard />
+      </Route> */}
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
