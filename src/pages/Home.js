@@ -30,7 +30,7 @@ function App() {
 
       <div className="container mt-xl-3">
         <div className="row">
-          <div className="col-8">
+          <div className="col-xl-8">
             <div className="row">
               <div className="col">
                 <Presentation />
@@ -42,7 +42,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-xl">
             <div style={{ position: "sticky", top: 100 }}>
               <Profile />
             </div>
