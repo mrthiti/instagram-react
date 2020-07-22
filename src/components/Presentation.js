@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Image, Card, Row, Col } from 'react-bootstrap';
 import getPresentation from '../stores/presentation/actions/getPresentation'
 
 function Presentation() {
@@ -14,27 +13,27 @@ function Presentation() {
   }, [dispatch]);
 
   return (
-    <Card>
-      <Card.Body>
-        <Row>
+    <div className="card" >
+      <div className="card-body">
+        <div className="row">
           {
             listPresentation.length === 0
               ? "Loading..."
               : listPresentation.map((it, index) => (
-                <Col key={index}>
-                  <Row className="justify-content-xl-center">
-                    <Image src={it.imageUrl} width="56" height="56" roundedCircle />
-                  </Row>
+                <div className="col" key={index}>
+                  <div className="row justify-content-xl-center">
+                    <img className="rounded-circle" src={it.imageUrl} width="56" height="56" alt="Profile" />
+                  </div>
 
-                  <Row className="justify-content-xl-center">
+                  <div className="row justify-content-xl-center">
                     <h6><small>{it.name}</small></h6>
-                  </Row>
-                </Col>
+                  </div>
+                </div>
               ))
           }
-        </Row>
-      </Card.Body>
-    </Card>
+        </div>
+      </div>
+    </div>
   );
 }
 
