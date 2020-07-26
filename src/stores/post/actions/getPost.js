@@ -20,11 +20,13 @@ let mockPost = async () => {
   return catData
 }
 
-export const GET_POST = "GET_POST"
+export const SET_POST = "SET_POST"
+export const setPost = (payload) => ({
+  type: SET_POST,
+  payload
+})
 
-export default async () => {
-  return {
-    type: GET_POST,
-    payload: await mockPost()
-  }
+export const getPost = async () => async (dispatch, getState) => {
+  let posts = await mockPost()
+  dispatch(setPost(posts))
 }

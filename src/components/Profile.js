@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import getSuggetion from '../stores/suggetion/actions/getSuggetion'
+import { getSuggetion } from '../stores/suggetion/actions/getSuggetion'
 
 function Presentation() {
   const dispatch = useDispatch()

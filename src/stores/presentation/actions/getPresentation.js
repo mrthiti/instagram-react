@@ -14,11 +14,13 @@ let mockPresentation = async () => {
   return catData
 }
 
-export const GET_PRESENTATION = "GET_PRESENTATION"
+export const SET_PRESENTATION = "SET_PRESENTATION"
+export const setPresentation = (payload) => ({
+  type: SET_PRESENTATION,
+  payload
+})
 
-export default async () => {
-  return {
-    type: GET_PRESENTATION,
-    payload: await mockPresentation()
-  }
+export const getPresentation = async () => async (dispatch, getState) => {
+  let listCat = await mockPresentation()
+  dispatch(setPresentation(listCat))
 }
