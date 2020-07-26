@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import getPresentation from '../stores/presentation/actions/getPresentation'
+import { getPresentation } from '../stores/presentation/actions/getPresentation'
 
 function Presentation() {
   const dispatch = useDispatch()

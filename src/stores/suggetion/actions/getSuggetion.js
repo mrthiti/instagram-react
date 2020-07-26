@@ -5,7 +5,7 @@ let mockType = () => {
   return types[Math.floor((Math.random() * 100)) % types.length]
 }
 
-let mockPresentation = async () => {
+let mockSuggetion = async () => {
   let catData = []
 
   for (let i = 0; i < 5; i++) {
@@ -20,11 +20,15 @@ let mockPresentation = async () => {
   return catData
 }
 
-export const GET_SUGGETION = "GET_SUGGETION"
-
-export default async () => {
+export const SET_SUGGETION = "SET_SUGGETION"
+export const setSuggetion = (payload) => {
   return {
-    type: GET_SUGGETION,
-    payload: await mockPresentation()
+    type: SET_SUGGETION,
+    payload
   }
+}
+
+export const getSuggetion = async () => async (dispatch, getState) => {
+  let listSuggetion = await mockSuggetion()
+  dispatch(setSuggetion(listSuggetion))
 }
